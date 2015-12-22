@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <!-- 顶部条 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:background="#3B63AE" >
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:drawablePadding="5dp"
+            android:drawableRight="@android:drawable/arrow_down_float"
+            android:gravity="center_vertical"
+            android:text="上海市"
+            android:textColor="#FFF"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_edittext_white"
+            android:padding="8dp"
+            android:text="输入闲客名，项目名称搜索"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_message_up" />
+    </RelativeLayout>
+
+    <!-- 筛选框 -->
+
+    <RadioGroup
+        android:id="@+id/rg_classify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_course"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="课程"
+            android:textColor="@color/text_color_blue"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:background="#000" />
+
+        <RadioButton
+            android:id="@+id/rb_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="区域"
+            android:textColor="@color/text_color_blue"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:background="#000" />
+
+        <RadioButton
+            android:id="@+id/rb_way"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="方式"
+            android:textColor="@color/text_color_blue"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:background="#000" />
+
+        <RadioButton
+            android:id="@+id/rb_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="价格"
+            android:textColor="@color/text_color_blue"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:background="#000" />
+
+        <RadioButton
+            android:id="@+id/rb_sirceo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="闲客"
+            android:textColor="@color/text_color_blue"
+            android:textSize="16sp" />
+    </RadioGroup>
+    <!-- 分割线 -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="center_vertical"
+        android:background="#CFCFD0" />
+
+    <!-- 课程列表 -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.ab.view.pullview.AbPullToRefreshView
+            android:id="@+id/lv_list_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/lv_course"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:listSelector="@android:color/transparent"
+                android:scrollbarStyle="outsideOverlay"
+                android:transcriptMode="normal" />
+        </com.ab.view.pullview.AbPullToRefreshView>
+
+        <include
+            android:id="@+id/layout_course"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/layout_classify_course"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/layout_area"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/layout_classify_area"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/layout_way"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/layout_classify_way"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/layout_price"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/layout_classify_price"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/layout_sirceo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/layout_classify_sirceo"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

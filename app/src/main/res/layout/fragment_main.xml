@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 顶部条 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:background="#3B63AE" >
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:drawablePadding="5dp"
+            android:drawableRight="@android:drawable/arrow_down_float"
+            android:gravity="center_vertical"
+            android:text="上海市"
+            android:textColor="#FFF"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_edittext_white"
+            android:padding="8dp"
+            android:text="输入闲客名，项目名称搜索"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_message_up" />
+    </RelativeLayout>
+
+    <!-- 广告位 -->
+
+    <com.ab.view.sliding.AbSlidingPlayView
+        android:id="@+id/layout_sliding_advertisement"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+
+    <!-- 课程列表 -->
+
+    <ListView
+        android:id="@+id/lv_course"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#E6E6E7"
+        android:dividerHeight="1dp"
+        android:listSelector="#EEEFEF"
+        android:scrollbarStyle="outsideOverlay"
+        android:transcriptMode="normal" />
+
+</LinearLayout>

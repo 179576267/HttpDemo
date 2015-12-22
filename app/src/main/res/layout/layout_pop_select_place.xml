@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000"
+        android:alpha="0.5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#F5F5F5"
+        android:clickable="true"
+        android:orientation="horizontal" >
+
+        <com.xiankezu.sirceo.widghts.wheel.WheelView
+            android:id="@+id/wheel_province"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+        </com.xiankezu.sirceo.widghts.wheel.WheelView>
+
+        <com.xiankezu.sirceo.widghts.wheel.WheelView
+            android:id="@+id/wheel_city"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+        </com.xiankezu.sirceo.widghts.wheel.WheelView>
+
+        <com.xiankezu.sirceo.widghts.wheel.WheelView
+            android:id="@+id/wheel_area"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+        </com.xiankezu.sirceo.widghts.wheel.WheelView>
+    </LinearLayout>
+
+</RelativeLayout>

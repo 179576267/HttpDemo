@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <attr name="borderRadius" format="dimension" />
+    <attr name="bordercolor" format="color" />
+    <attr name="strokeWidth" format="dimension"></attr>
+    <attr name="src" format="reference"></attr>
+    <attr name="backgroundColor" format="color" />
+    <attr name="progressColor" format="color" />
+    <attr name="type">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+    </attr>
+    
+    
+    
+    
+    <!--圆形的ImageView-->
+    <declare-styleable name="RoundImageView">
+        <!--边框的宽度-->
+        <attr name="border_width" format="dimension"/>
+        <!--边框的颜色-->
+        <attr name="border_color" format="color"/>
+    </declare-styleable>
+    
+    <!-- 圆形及圆角的ImageView -->
+    <declare-styleable name="RoundImageViewWithRect">
+        <attr name="borderRadius" />
+        <attr name="type" />
+    </declare-styleable>
+    
+    <!-- GifView -->
+     <declare-styleable name="GifView">
+        <attr name="src" />
+    </declare-styleable>
+</resources>

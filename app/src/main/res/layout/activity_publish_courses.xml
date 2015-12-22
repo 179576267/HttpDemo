@@ -1,0 +1,611 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical" >
+
+    <!-- 顶部条 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:background="#197FEE" >
+
+        <ImageView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:src="@drawable/button_return_up" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="课程发布"
+            android:textColor="#FFF"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="47dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_waring"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="依次上传:封面，目录，封底。至少一张，最多六张" />
+
+            <!-- 分割线 -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#A3A3A4" />
+
+            <!-- 照片 -->
+
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#F6F6F6"
+                android:numColumns="6" >
+            </GridView>
+            <!-- 分割线 -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#A3A3A4" />
+            <!-- 授课方式 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal"
+                android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="授课方式:"
+                    android:textSize="14sp" />
+
+                <com.xiankezu.sirceo.widghts.NestRadioGroup
+                    android:id="@+id/main_radio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radio_button0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selsect_check_course"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:tag="radio_button0"
+                        android:text="学客上门"
+                        android:textColor="@color/text_color_green" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selsect_check_course"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:tag="radio_button0"
+                        android:text="闲客上门"
+                        android:textColor="@color/text_color_green" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selsect_check_course"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:tag="radio_button0"
+                        android:text="网络授课"
+                        android:textColor="@color/text_color_green" />
+                </com.xiankezu.sirceo.widghts.NestRadioGroup>
+            </LinearLayout>
+            <!-- 分割线 -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#A3A3A4" />
+            <!-- 选择类目 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="#FFF" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:text="选择类目 "
+                    android:textColor="#3E3938"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_right_icon_comment"
+                    android:layout_width="12dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/button_return_dwon"
+                    android:rotation="180" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="类目的选择项"
+                    android:textColor="#009FE8" />
+            </RelativeLayout>
+            <!-- 分割线 -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#A3A3A4" />
+            <!-- 选择类目 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="#FFF" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:text="请选择授课区域 "
+                    android:textColor="#3E3938"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="12dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/button_return_dwon"
+                    android:rotation="180" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="区域的选择项"
+                    android:textColor="#009FE8" />
+            </RelativeLayout>
+            <!-- 分割线 -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#A3A3A4" />
+            <!-- 选择类目 -->
+
+            <RelativeLayout
+                android:id="@+id/rl_setting_class_hour"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="#FFF" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:text="课时设置 "
+                    android:textColor="#3E3938"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="12dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/button_return_dwon"
+                    android:rotation="180" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="课时的选择项"
+                    android:textColor="#009FE8" />
+            </RelativeLayout>
+            <!-- 分割线 -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#A3A3A4" />
+
+            <!-- 教材或者课程名称 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="教材或者课程名称:"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/shape_edittext_black_border"
+                    android:hint="课程名称"
+                    android:paddingLeft="3dp"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            <!-- 分割线 -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#A3A3A4" />
+            <!-- 课程目标 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="3dp"
+                android:visibility="visible" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="8dp"
+                    android:text="输入课程目标:"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/shape_edittext_black_border"
+                    android:gravity="top"
+                    android:hint="30-100字"
+                    android:padding="3dp"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            <!-- 分割线 -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#A3A3A4" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="选择授课时间" />
+            <!-- 分割线 -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#A3A3A4" />
+            <!-- 日期选择 -->
+
+            <com.xiankezu.sirceo.widghts.NestRadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radio_button3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selsect_check_course"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:tag="radio_button0"
+                    android:text="今天\n12月21日"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="10sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_button4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selsect_check_course"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:tag="radio_button0"
+                    android:text="明天\n12月22日"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="10sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_button5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selsect_check_course"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:tag="radio_button0"
+                    android:text="今天\n12月23日"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="10sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_button6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selsect_check_course"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:tag="radio_button0"
+                    android:text="后天\n12月24日"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="10sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_button7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selsect_check_course"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:tag="radio_button0"
+                    android:text="周四\n12月25日"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="10sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_button8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selsect_check_course"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:tag="radio_button0"
+                    android:text="周五\n12月26日"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="10sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_button9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selsect_check_course"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:tag="radio_button0"
+                    android:text="周六\n12月27日"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="10sp" />
+            </com.xiankezu.sirceo.widghts.NestRadioGroup>
+
+            <!-- 时间选择1 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selsect_check_course"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="09:00-10:00\n已设置预约"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="12sp" />
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selsect_check_course"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="09:00-10:00\n未设置预约"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="12sp" />
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selsect_check_course"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="09:00-10:00\n已设置预约"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <!-- 时间选择2 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selsect_check_course"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="09:00-10:00\n已设置预约"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="12sp" />
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selsect_check_course"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="09:00-10:00\n未设置预约"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="12sp" />
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selsect_check_course"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="09:00-10:00\n已设置预约"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- 分割线 -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="#A3A3A4" />
+            
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="#E5E5E5" >
+
+                <ImageView
+                    android:id="@+id/icon_message_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="23dp"
+                    android:src="@drawable/icon_address_manger" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/icon_message_up"
+                    android:text="设置授课地点"
+                    android:textColor="#3E3938"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_right_icon_message_up"
+                    android:layout_width="12dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/button_return_dwon"
+                    android:rotation="180" />
+            </RelativeLayout>
+            
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="#3A63AD"
+        android:gravity="center"
+        android:text="确定发布"
+        android:textColor="#FFF"
+        android:textSize="20sp" />
+
+</RelativeLayout>

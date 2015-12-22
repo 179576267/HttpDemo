@@ -1,0 +1,127 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#E7E7E6" />
+
+        <com.xiankezu.sirceo.widghts.NestRadioGroup
+            android:id="@+id/main_radio"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="top"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radio_button0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:drawableBottom="@drawable/selsect_menu_main"
+                android:gravity="center"
+                android:tag="radio_button0"
+                android:text="首页"
+                android:textColor="@color/text_color_blue" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <RadioButton
+                    android:id="@+id/radio_button1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="2dp"
+                    android:button="@null"
+                    android:drawableBottom="@drawable/selsect_menu_course"
+                    android:gravity="center"
+                    android:tag="radio_button1"
+                    android:text="课程"
+                    android:textColor="@color/text_color_blue" />
+
+                <TextView
+                    android:id="@+id/tv_red_message"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/icon_attention"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <RadioButton
+                    android:id="@+id/radio_button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableBottom="@drawable/selsect_menu_skill"
+                    android:gravity="center"
+                    android:tag="radio_button2"
+                    android:text="客厅"
+                    android:textColor="@color/text_color_blue" />
+
+                <TextView
+                    android:id="@+id/tv_red_discover"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/icon_attention"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <RadioButton
+                android:id="@+id/radio_button3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableBottom="@drawable/selsect_menu_me"
+                android:gravity="center"
+                android:tag="radio_button2"
+                android:text="我的"
+                android:textColor="@color/text_color_blue" />
+        </com.xiankezu.sirceo.widghts.NestRadioGroup>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" 
+        android:layout_above="@id/layout_bottom">
+    </FrameLayout>
+
+</RelativeLayout>

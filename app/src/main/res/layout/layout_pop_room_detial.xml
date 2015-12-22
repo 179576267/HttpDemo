@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF"
+    android:padding="15dp" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:textColor="#3E3938"
+        android:textSize="14sp"
+        android:text="可容纳人数：20人"/>
+    
+     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="8dp"
+        android:textColor="#3E3938"
+        android:textSize="14sp"
+        android:text="是否有桌椅：有"/>
+     
+     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="8dp"
+        android:textColor="#3E3938"
+        android:textSize="14sp"
+        android:text="09:00-13:00出租价格:100元"/>
+     
+     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="8dp"
+        android:textColor="#3E3938"
+        android:textSize="14sp"
+        android:text="13:00-17:00出租价格:100元"/>
+     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="8dp"
+        android:textColor="#3E3938"
+        android:textSize="14sp"
+        android:text="17:00-21:00出租价格:100元"/>
+     
+     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="8dp"
+        android:textColor="#009FE8"
+        android:textSize="14sp"
+        android:text="目前已有人预定"/>
+
+</LinearLayout>
